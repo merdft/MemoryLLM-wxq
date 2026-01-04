@@ -50,7 +50,7 @@ model.inject_memory(tokenizer(ctx, return_tensors='pt', add_special_tokens=False
 #                          eos_token_id=terminators)
 
 # response = tokenizer.decode(outputs[0])
-print(response)
+#print(response)
 
 
 # #for the pretrained model, use the following template:

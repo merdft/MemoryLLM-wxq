@@ -1,0 +1,9 @@
+/home/xqwang/miniconda3/envs/mplus/lib/python3.9/site-packages/torch/cuda/__init__.py:54: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]Loading checkpoint shards:  12%|█▎        | 1/8 [00:00<00:03,  1.75it/s]Loading checkpoint shards:  25%|██▌       | 2/8 [00:01<00:03,  1.94it/s]Loading checkpoint shards:  38%|███▊      | 3/8 [00:01<00:02,  2.09it/s]Loading checkpoint shards:  50%|█████     | 4/8 [00:01<00:01,  2.19it/s]Loading checkpoint shards:  62%|██████▎   | 5/8 [00:02<00:01,  2.19it/s]Loading checkpoint shards:  75%|███████▌  | 6/8 [00:02<00:00,  2.29it/s]Loading checkpoint shards:  88%|████████▊ | 7/8 [00:03<00:00,  2.35it/s]Loading checkpoint shards: 100%|██████████| 8/8 [00:03<00:00,  2.42it/s]Loading checkpoint shards: 100%|██████████| 8/8 [00:03<00:00,  2.25it/s]
+past_key_values should not be None in from_legacy_cache()
+We detected that you are passing `past_key_values` as a tuple and this is deprecated and will be removed in v4.43. Please use an appropriate `Cache` class (https://huggingface.co/docs/transformers/v4.41.3/en/internal/generation_utils#transformers.Cache)
+The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.

@@ -19,6 +19,7 @@
 # limitations under the License.
 import math
 from typing import List, Optional, Tuple, Union
+from transformers import GenerationMixin
 
 import torch
 import numpy as np
@@ -1334,7 +1335,7 @@ class LlamaModel(LlamaPreTrainedModel):
         return causal_mask
 
 
-class LlamaForCausalLM(LlamaPreTrainedModel):
+class LlamaForCausalLM(LlamaPreTrainedModel,GenerationMixin):
     _tied_weights_keys = ["lm_head.weight"]
 
     def __init__(self, config):
@@ -1844,7 +1845,8 @@ class MPlus(LlamaForCausalLM):
             from peft import get_peft_model, LoraConfig, TaskType
 
             peft_config = LoraConfig(
-                task_type=TaskType.CAUSAL_LM, 
+                #task_type=TaskType.CAUSAL_LM, 
+                task_type=TaskType.FEATURE_EXTRACTION,
                 inference_mode=config.lora_config['inference_mode'], 
                 r=config.lora_config['r'], 
                 lora_alpha=config.lora_config['lora_alpha'], 
